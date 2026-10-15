@@ -1,0 +1,34 @@
+﻿<Window x:Class="WinAirPlay.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        Title="WinAirPlay Studio" Height="720" Width="1280"
+        Background="#1E1E1E" Foreground="White">
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Control Panel -->
+        <StackPanel Grid.Column="0" Margin="0,0,20,0">
+            <TextBlock Text="AirPlay Receiver" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" Foreground="#007ACC"/>
+
+            <TextBlock Text="Server Name:" Margin="0,0,0,5"/>
+            <TextBox x:Name="ServerNameBox" Text="WinAirPlay-ROG" Padding="5" Margin="0,0,0,15" Background="#333" Foreground="White" BorderThickness="0"/>
+
+            <CheckBox x:Name="RecordCheckBox" Content="Record stream to MP4" Foreground="White" Margin="0,0,0,20"/>
+
+            <Button x:Name="StartBtn" Content="Start Receiver" Background="#28A745" Foreground="White" Padding="10" Margin="0,0,0,10" Click="StartBtn_Click"/>
+            <Button x:Name="StopBtn" Content="Stop Receiver" Background="#DC3545" Foreground="White" Padding="10" Click="StopBtn_Click" IsEnabled="False"/>
+
+            <!-- Console Logs -->
+            <TextBox x:Name="ConsoleLog" Background="#111" Foreground="#00FF00" FontFamily="Consolas" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Height="400" Margin="0,20,0,0"/>
+        </StackPanel>
+
+        <!-- Video Docking Area -->
+        <WindowsFormsHost x:Name="VideoHost" Grid.Column="1" Background="Black" SizeChanged="VideoHost_SizeChanged">
+            <wf:Panel x:Name="VideoPanel" BackColor="Black"/>
+        </WindowsFormsHost>
+    </Grid>
+</Window>
