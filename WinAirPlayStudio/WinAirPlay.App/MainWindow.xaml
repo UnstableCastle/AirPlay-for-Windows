@@ -1,34 +1,284 @@
-﻿<Window x:Class="WinAirPlay.App.MainWindow"
+<Window x:Class="WinAirPlay.App.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
-        Title="WinAirPlay Studio" Height="720" Width="1280"
-        Background="#1E1E1E" Foreground="White">
-    <Grid Margin="20">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        Title="AirPlay Studio"
+        Width="1180" Height="760" MinWidth="900" MinHeight="620"
+        Background="#0F131C" Foreground="#DFE2EE"
+        WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Window.Resources>
+        <SolidColorBrush x:Key="CanvasBrush" Color="#0F131C"/>
+        <SolidColorBrush x:Key="SidebarBrush" Color="#181C24"/>
+        <SolidColorBrush x:Key="CardBrush" Color="#1C2028"/>
+        <SolidColorBrush x:Key="InputBrush" Color="#0A0E16"/>
+        <SolidColorBrush x:Key="OutlineBrush" Color="#3D494C"/>
+        <SolidColorBrush x:Key="MutedBrush" Color="#A3AFB5"/>
+        <SolidColorBrush x:Key="CyanBrush" Color="#4CD7F6"/>
+        <SolidColorBrush x:Key="GreenBrush" Color="#4EDEA3"/>
 
-        <!-- Control Panel -->
-        <StackPanel Grid.Column="0" Margin="0,0,20,0">
-            <TextBlock Text="AirPlay Receiver" FontSize="24" FontWeight="Bold" Margin="0,0,0,20" Foreground="#007ACC"/>
+        <Style x:Key="FieldStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="{StaticResource InputBrush}"/>
+            <Setter Property="Foreground" Value="#DFE2EE"/>
+            <Setter Property="BorderBrush" Value="#3D494C"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="9,7"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="CaretBrush" Value="#4CD7F6"/>
+        </Style>
 
-            <TextBlock Text="Server Name:" Margin="0,0,0,5"/>
-            <TextBox x:Name="ServerNameBox" Text="WinAirPlay-ROG" Padding="5" Margin="0,0,0,15" Background="#333" Foreground="White" BorderThickness="0"/>
+        <Style x:Key="ChoiceStyle" TargetType="ComboBox">
+            <Setter Property="Background" Value="{StaticResource InputBrush}"/>
+            <Setter Property="Foreground" Value="#DFE2EE"/>
+            <Setter Property="BorderBrush" Value="#3D494C"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Padding" Value="7,5"/>
+            <Setter Property="FontSize" Value="12"/>
+        </Style>
 
-            <CheckBox x:Name="RecordCheckBox" Content="Record stream to MP4" Foreground="White" Margin="0,0,0,20"/>
+        <Style x:Key="PrimaryButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#4EDEA3"/>
+            <Setter Property="Foreground" Value="#08251A"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Padding" Value="12,9"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="ButtonBorder" Background="{TemplateBinding Background}" CornerRadius="7">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="ButtonBorder" Property="Opacity" Value="0.88"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter TargetName="ButtonBorder" Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
 
-            <Button x:Name="StartBtn" Content="Start Receiver" Background="#28A745" Foreground="White" Padding="10" Margin="0,0,0,10" Click="StartBtn_Click"/>
-            <Button x:Name="StopBtn" Content="Stop Receiver" Background="#DC3545" Foreground="White" Padding="10" Click="StopBtn_Click" IsEnabled="False"/>
+        <Style x:Key="SecondaryButtonStyle" TargetType="Button" BasedOn="{StaticResource PrimaryButtonStyle}">
+            <Setter Property="Background" Value="#262A33"/>
+            <Setter Property="Foreground" Value="#DFE2EE"/>
+            <Setter Property="BorderBrush" Value="#3D494C"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
 
-            <!-- Console Logs -->
-            <TextBox x:Name="ConsoleLog" Background="#111" Foreground="#00FF00" FontFamily="Consolas" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Height="400" Margin="0,20,0,0"/>
-        </StackPanel>
+        <Style x:Key="LogTextStyle" TargetType="TextBox">
+            <Setter Property="Background" Value="#0A0E16"/>
+            <Setter Property="Foreground" Value="#B8C7D9"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontFamily" Value="Consolas"/>
+            <Setter Property="FontSize" Value="10"/>
+            <Setter Property="IsReadOnly" Value="True"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+            <Setter Property="HorizontalScrollBarVisibility" Value="Auto"/>
+        </Style>
+    </Window.Resources>
 
-        <!-- Video Docking Area -->
-        <WindowsFormsHost x:Name="VideoHost" Grid.Column="1" Background="Black" SizeChanged="VideoHost_SizeChanged">
-            <wf:Panel x:Name="VideoPanel" BackColor="Black"/>
-        </WindowsFormsHost>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="44"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+
+        <Border Grid.Row="0" Background="#0A0E16" BorderBrush="#263039" BorderThickness="0,0,0,1">
+            <Grid Margin="12,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Width="24" Height="24" CornerRadius="7" Background="#12333A" Margin="0,0,9,0">
+                        <TextBlock Text="A" Foreground="{StaticResource CyanBrush}" FontSize="14" FontWeight="Bold"
+                                   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                    <TextBlock Text="AirPlay Studio" FontSize="13" FontWeight="SemiBold"
+                               VerticalAlignment="Center"/>
+                    <Border Background="#262A33" CornerRadius="4" Padding="5,2" Margin="9,0,0,0">
+                        <TextBlock Text="WINDOWS" Foreground="{StaticResource CyanBrush}" FontSize="9"
+                                   FontWeight="SemiBold"/>
+                    </Border>
+                </StackPanel>
+                <Border HorizontalAlignment="Right" VerticalAlignment="Center" Background="#14251F"
+                        BorderBrush="#285A47" BorderThickness="1" CornerRadius="14" Padding="10,5">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Tag="status-indicator" Width="7" Height="7" Fill="#718096" Margin="0,0,7,0"
+                                 VerticalAlignment="Center"/>
+                        <TextBlock Tag="status-text" Text="Receiver stopped" Foreground="#C2D0D0"
+                                   FontSize="11" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Border>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="0" Background="{StaticResource SidebarBrush}"
+                    BorderBrush="#263039" BorderThickness="0,0,1,0">
+                <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled">
+                    <StackPanel Margin="11">
+                        <Border Background="#262A33" BorderBrush="#3D494C" BorderThickness="1"
+                                CornerRadius="10" Padding="10" Margin="0,0,0,12">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="38"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Border Width="34" Height="34" CornerRadius="8" Background="#31353E">
+                                    <TextBlock Text="&#xE8D7;" FontFamily="Segoe MDL2 Assets" FontSize="16"
+                                               Foreground="{StaticResource CyanBrush}"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </Border>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                    <TextBlock Text="AirPlay receiver" FontSize="12" FontWeight="SemiBold"/>
+                                    <TextBlock Text="Ready for an iPhone connection" Tag="connection-hint"
+                                               Foreground="{StaticResource MutedBrush}" FontSize="10"
+                                               Margin="0,3,0,0"/>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <Border Background="{StaticResource CardBrush}" CornerRadius="8" Padding="10"
+                                Margin="0,0,0,12">
+                            <StackPanel>
+                                <Grid Margin="0,0,0,9">
+                                    <TextBlock Text="RECEIVER CONFIG" Foreground="{StaticResource MutedBrush}"
+                                               FontSize="9" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                                    <TextBlock Tag="engine-badge" Text="●  OFFLINE" Foreground="#869397"
+                                               FontSize="9" FontWeight="SemiBold" HorizontalAlignment="Right"/>
+                                </Grid>
+
+                                <TextBlock Text="Device name" Foreground="#BCC9CD" FontSize="10"
+                                           Margin="0,0,0,4"/>
+                                <TextBox x:Name="ServerNameBox" Text="WinAirPlay-ROG" Style="{StaticResource FieldStyle}"
+                                         Margin="0,0,0,10"/>
+
+                                <Grid Margin="0,0,0,4">
+                                    <TextBlock Text="Stream quality" Foreground="#BCC9CD" FontSize="10"
+                                               VerticalAlignment="Center"/>
+                                    <TextBlock Text="HEVC" Foreground="{StaticResource CyanBrush}" FontSize="9"
+                                               HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                </Grid>
+                                <ComboBox Tag="quality-selector" Style="{StaticResource ChoiceStyle}" SelectedIndex="0"
+                                          SelectionChanged="QualityBox_SelectionChanged"
+                                          Margin="0,0,0,5">
+                                    <ComboBoxItem Content="Smooth  ·  720p / 30 fps" Tag="smooth"
+                                                  Foreground="#DFE2EE" Background="#181C24"/>
+                                    <ComboBoxItem Content="Balanced  ·  1080p / 60 fps" Tag="balanced"
+                                                  Foreground="#DFE2EE" Background="#181C24"/>
+                                    <ComboBoxItem Content="High  ·  4K / 60 fps" Tag="high"
+                                                  Foreground="#DFE2EE" Background="#181C24"/>
+                                </ComboBox>
+                                <TextBlock Text="Higher quality needs more GPU and Wi-Fi bandwidth."
+                                           Foreground="#869397" FontSize="9" TextWrapping="Wrap"
+                                           Margin="0,0,0,10"/>
+
+                                <TextBlock Text="Audio output" Foreground="#BCC9CD" FontSize="10"
+                                           Margin="0,0,0,4"/>
+                                <ComboBox Tag="audio-output-selector" Style="{StaticResource ChoiceStyle}"
+                                          SelectionChanged="AudioOutput_SelectionChanged"
+                                          Margin="0,0,0,4">
+                                    <ComboBoxItem Content="Windows default playback device"
+                                                  Foreground="#DFE2EE" Background="#181C24"/>
+                                </ComboBox>
+                                <TextBlock Text="Choose speakers/headphones (output), not a microphone."
+                                           Foreground="#869397" FontSize="9" TextWrapping="Wrap"
+                                           Margin="0,0,0,10"/>
+
+                                <CheckBox x:Name="RecordCheckBox" Content="Record to MP4"
+                                          Foreground="#DFE2EE" FontSize="11" Margin="0,0,0,4"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Button x:Name="StartBtn" Content="&#xE768;   Start receiver"
+                                Style="{StaticResource PrimaryButtonStyle}" Click="StartBtn_Click"
+                                Margin="0,0,0,7"/>
+                        <Button x:Name="StopBtn" Content="&#xE71A;   Stop receiver"
+                                Style="{StaticResource SecondaryButtonStyle}" Click="StopBtn_Click"
+                                IsEnabled="False" Margin="0,0,0,12"/>
+
+                        <Border Background="#0A0E16" BorderBrush="#303941" BorderThickness="1"
+                                CornerRadius="8" Padding="9" Margin="0,0,0,10">
+                            <StackPanel>
+                                <Grid Margin="0,0,0,6">
+                                    <TextBlock Text="AUDIO OUTPUT" Foreground="{StaticResource MutedBrush}"
+                                               FontSize="9" FontWeight="SemiBold" VerticalAlignment="Center"/>
+                                    <TextBlock Tag="audio-status" Text="Playback device not selected" Foreground="#E9B44C"
+                                               FontSize="9" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                </Grid>
+                                <TextBlock Text="AirPlay audio plays through the selected Windows speakers or headphones."
+                                           Foreground="#869397" FontSize="9" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </Border>
+
+                        <Expander Header="Connection log" Foreground="#DFE2EE" FontSize="11"
+                                  IsExpanded="True">
+                            <Border Background="#0A0E16" BorderBrush="#303941" BorderThickness="1"
+                                    CornerRadius="7" Padding="7" Margin="0,7,0,0">
+                                <TextBox x:Name="ConsoleLog" Style="{StaticResource LogTextStyle}" Height="126"/>
+                            </Border>
+                        </Expander>
+                    </StackPanel>
+                </ScrollViewer>
+            </Border>
+
+            <Grid Grid.Column="1" Background="#0B0F17" ClipToBounds="True">
+                <WindowsFormsHost x:Name="VideoHost" Background="#0B0F17" Visibility="Collapsed"
+                                  SizeChanged="VideoHost_SizeChanged">
+                    <wf:Panel x:Name="VideoPanel" BackColor="#0B0F17"/>
+                </WindowsFormsHost>
+
+                <Border Tag="video-placeholder" Background="#0B0F17" IsHitTestVisible="False">
+                    <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Border Width="62" Height="62" CornerRadius="18" Background="#181C24"
+                                BorderBrush="#303941" BorderThickness="1" HorizontalAlignment="Center"
+                                Margin="0,0,0,16">
+                            <TextBlock Text="&#xE7F4;" FontFamily="Segoe MDL2 Assets" FontSize="25"
+                                       Foreground="{StaticResource CyanBrush}"
+                                       HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <TextBlock Text="Your screen appears here" FontSize="18" FontWeight="SemiBold"
+                                   HorizontalAlignment="Center"/>
+                        <TextBlock Text="Start the receiver, then choose WinAirPlay-ROG&#10;in Screen Mirroring on your iPhone."
+                                   Foreground="{StaticResource MutedBrush}" FontSize="12" TextAlignment="Center"
+                                   LineHeight="20" Margin="0,8,0,0"/>
+                    </StackPanel>
+                </Border>
+
+                <Border VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,14,0,0"
+                        Background="#E61C2028" BorderBrush="#3D494C" BorderThickness="1"
+                        CornerRadius="18" Padding="12,7">
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Width="6" Height="6" Fill="{StaticResource CyanBrush}" Margin="0,0,7,0"
+                                 VerticalAlignment="Center"/>
+                        <TextBlock Text="MIRRORING STAGE" Foreground="#BCC9CD" FontSize="9"
+                                   FontWeight="SemiBold" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
+
+        <Border Grid.Row="2" Background="#0A0E16" BorderBrush="#263039" BorderThickness="0,1,0,0">
+            <Grid Margin="12,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Ellipse Width="6" Height="6" Fill="{StaticResource GreenBrush}" Margin="0,0,7,0"/>
+                    <TextBlock Text="AIRPLAY RECEIVER" Foreground="{StaticResource GreenBrush}" FontSize="9"
+                               FontWeight="SemiBold"/>
+                    <TextBlock Text="  •  Windows playback device" Foreground="{StaticResource MutedBrush}"
+                               FontSize="9" Margin="8,0,0,0"/>
+                </StackPanel>
+                <TextBlock Tag="quality-summary" Text="Smooth  ·  720p / 30 fps"
+                           Foreground="#BCC9CD" FontSize="9" HorizontalAlignment="Right"
+                           VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
     </Grid>
 </Window>

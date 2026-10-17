@@ -21,11 +21,6 @@ C:\D DRIVE\DAC\CDAC_DAC-\DOT-Net\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10
 C:\D DRIVE\DAC\CDAC_DAC-\DOT-Net\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\WinAirPl.A624AFF7.Up2Date
 C:\D DRIVE\DAC\CDAC_DAC-\DOT-Net\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\Engine\uxplay.exe
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\Engine\uxplay.exe
-C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.exe
-C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.deps.json
-C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.runtimeconfig.json
-C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.dll
-C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.pdb
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\MainWindow.baml
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\MainWindow.g.cs
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\App.g.cs
@@ -35,9 +30,75 @@ C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\Win
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\WinAirPlay.App.AssemblyInfoInputs.cache
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\WinAirPlay.App.AssemblyInfo.cs
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\WinAirPlay.App.csproj.CoreCompileInputs.cache
+C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\WinAirPlay.App.sourcelink.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayMeterValidation\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayMeterValidation\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayMeterValidation\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayMeterValidation\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayMeterValidation\WinAirPlay.App.pdb
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\WinAirPlay.App.dll
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\refint\WinAirPlay.App.dll
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\WinAirPlay.App.pdb
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\WinAirPlay.App.genruntimeconfig.cache
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\ref\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalValidation\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalValidation\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalValidation\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalValidation\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalValidation\WinAirPlay.App.pdb
+C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.exe
+C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.deps.json
+C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.runtimeconfig.json
+C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.dll
+C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\bin\Debug\net10.0-windows\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayTimeoutValidation\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayTimeoutValidation\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayTimeoutValidation\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayTimeoutValidation\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayTimeoutValidation\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDashboardValidation\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDashboardValidation\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDashboardValidation\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDashboardValidation\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDashboardValidation\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayCrashFixValidation\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayCrashFixValidation\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayCrashFixValidation\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayCrashFixValidation\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayCrashFixValidation\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayD3D12Validation\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayD3D12Validation\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayD3D12Validation\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayD3D12Validation\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayD3D12Validation\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDirectAudioValidation\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDirectAudioValidation\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDirectAudioValidation\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDirectAudioValidation\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayDirectAudioValidation\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalRouteBuild\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalRouteBuild\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalRouteBuild\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalRouteBuild\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayFinalRouteBuild\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputChoiceBuild\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputChoiceBuild\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputChoiceBuild\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputChoiceBuild\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputChoiceBuild\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputParserBuild\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputParserBuild\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputParserBuild\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputParserBuild\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayOutputParserBuild\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayGlideXHandoffBuild\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayGlideXHandoffBuild\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayGlideXHandoffBuild\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayGlideXHandoffBuild\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayGlideXHandoffBuild\WinAirPlay.App.pdb
+C:\Users\Amaan\AppData\Local\Temp\AirPlayNoGlideXBuild\Engine\uxplay.exe
+C:\Users\Amaan\AppData\Local\Temp\AirPlayNoGlideXBuild\WinAirPlay.App.deps.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayNoGlideXBuild\WinAirPlay.App.runtimeconfig.json
+C:\Users\Amaan\AppData\Local\Temp\AirPlayNoGlideXBuild\WinAirPlay.App.dll
+C:\Users\Amaan\AppData\Local\Temp\AirPlayNoGlideXBuild\WinAirPlay.App.pdb
 C:\D DRIVE\airplay\WinAirPlayStudio\WinAirPlay.App\obj\Debug\net10.0-windows\WinAirPl.A624AFF7.Up2Date

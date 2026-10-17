@@ -1,99 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|c:\\d drive\\airplay\\winairplaystudio\\winairplay.app\\airplayengineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|solutionrelative:winairplay.app\\airplayengineservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|c:\\d drive\\airplay\\winairplaystudio\\winairplay.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|solutionrelative:winairplay.app\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|c:\\d drive\\airplay\\winairplaystudio\\winairplay.app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|solutionrelative:winairplay.app\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|c:\\d drive\\airplay\\winairplaystudio\\winairplay.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|solutionrelative:winairplay.app\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|c:\\d drive\\airplay\\winairplaystudio\\winairplay.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7FC4DCB-49B6-BFC3-7BAB-2B42853B78A5}|WinAirPlay.App\\WinAirPlay.App.csproj|solutionrelative:winairplay.app\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "App.xaml",
-              "DocumentMoniker": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\App.xaml",
-              "RelativeDocumentMoniker": "WinAirPlay.App\\App.xaml",
-              "ToolTip": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\App.xaml",
-              "RelativeToolTip": "WinAirPlay.App\\App.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-15T09:32:59.211Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AirPlayEngineService.cs",
-              "DocumentMoniker": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\AirPlayEngineService.cs",
-              "RelativeDocumentMoniker": "WinAirPlay.App\\AirPlayEngineService.cs",
-              "ToolTip": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\AirPlayEngineService.cs",
-              "RelativeToolTip": "WinAirPlay.App\\AirPlayEngineService.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAA4wDoAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T09:41:17.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "WinAirPlay.App\\MainWindow.xaml",
-              "ToolTip": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\MainWindow.xaml",
-              "RelativeToolTip": "WinAirPlay.App\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-10-15T09:34:36.013Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "WinAirPlay.App\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\MainWindow.xaml.cs",
-              "RelativeToolTip": "WinAirPlay.App\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T09:33:54.131Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\App.xaml.cs",
-              "RelativeDocumentMoniker": "WinAirPlay.App\\App.xaml.cs",
-              "ToolTip": "C:\\D DRIVE\\airplay\\WinAirPlayStudio\\WinAirPlay.App\\App.xaml.cs",
-              "RelativeToolTip": "WinAirPlay.App\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-15T09:31:43.928Z"
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
